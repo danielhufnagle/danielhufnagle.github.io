@@ -1,11 +1,52 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Daniel Hufnagle</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div id="typewriter header"></div>
-        <script src="script.js"></script>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typewriter Effect</title>
+    <style>
+        body {
+            font-family: 'Courier New', monospace;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .typewriter {
+            font-size: 24px;
+            white-space: nowrap;
+            border-right: 2px solid white;
+            padding-right: 5px;
+            overflow: hidden;
+            width: 0;
+            animation: blinkCursor 0.8s step-end infinite;
+        }
+        @keyframes blinkCursor {
+            50% { border-color: transparent; }
+        }
+    </style>
+</head>
+<body>
+    <div class="typewriter" id="typewriter"></div>
+
+    <script>
+        const text = "Hello, this is a typewriter effect!";
+        const speed = 100; // Typing speed in milliseconds
+        let i = 0;
+
+        function type() {
+            if (i < text.length) {
+                document.getElementById("typewriter").innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            } else {
+                document.getElementById("typewriter").style.borderRight = "none"; // Remove cursor after typing
+            }
+        }
+
+        window.onload = type;
+    </script>
+</body>
 </html>

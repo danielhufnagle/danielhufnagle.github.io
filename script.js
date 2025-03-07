@@ -18,4 +18,4 @@ function typeWriter() {
 }
 
 // Start the typewriter effect
-typeWriter();
+window.onload = typeWriter();
