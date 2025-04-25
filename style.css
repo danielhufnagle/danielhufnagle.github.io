@@ -1,26 +1,22 @@
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background-color: #282c34;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 24px;
+    background-color: #141b1e;
+    color: #dadada;
 }
-
-#typewriter {
-    border-right: 2px solid #fff;
-    white-space: nowrap;
-    overflow: hidden;
-    animation: blinkCursor 0.75s step-end infinite;
+nav ul {
+    margin: 0;
+    padding: 0;
+    background-color: #232a2d;
 }
-
-@keyframes blinkCursor {
-    from, to {
-        border-right-color: transparent;
-    }
-    50% {
-        border-right-color: #fff;
-    }
+nav ul li {
+    display: inline;
+    color: #e5c76b;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #b3b9b8;
+    transition: 0.3s;
+}
+nav ul li a:hover {
+    text-decoration: overline;
+    color: #e57474;
 }
