@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"> <!-- Add FontAwesome to use Instagram icon -->
+  <!-- <script src="jquery-3.7.1.min.js"></script> -->
+</head>
+<body>
+  <header>
+    <div><a href="index.html" class="logo">DANIEL HUFNAGLE PHOTO</a></div>
+    <nav>
+      <a href="gallery.html">Gallery</a>
+      <a href="store.html">Store</a>
+      <a href="contact.html" class="current">Contact</a>
+      <button id="theme" onclick="theme_switch()"><i class="fa-solid fa-sun"></i></button>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact</h1>
+    <div class="contact-section">
+      <h3>Let's get in touch!</h3>
+      <p>Email: <a href="mailto:you@example.com" id="email-link">you@example.com</a></p>
+      <a href="https://instagram.com/yourhandle" id="insta-link" aria-label="instagram"><i class="fa-brands fa-instagram"></i></a> <!-- Use Instagram FontAwesome icon -->
+      <form>
+        <label for="name">Name:</label>
+        <br>
+        <input type="text" placeholder="Name" id="name">
+        <br>
+        <label for="email">Email Address:</label>
+        <br>
+        <input type="email" placeholder="Email Address" id="email">
+        <br>
+        <label for="subject">Subject:</label>
+        <br>
+        <input type="text" placeholder="Subject" id="subject">
+        <br>
+        <label for="message">Message:</label>
+        <br>
+        <textarea placeholder="Message" id="message"></textarea>
+      </form>
+      <button type="submit">Send</button>
+    </div>
+  </main>
+  <script src="scripts/theme_switcher.js"></script>
+</body>
+</html>
