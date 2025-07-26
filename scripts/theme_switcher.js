@@ -8,12 +8,12 @@ var theme_button = document.getElementById("theme");
 if (curr_theme != "dark") {
     document.body.classList.add("light");
     localStorage.setItem("theme", "light");
-    theme_button.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    theme_button.innerHTML = '<i class="fa-solid fa-moon"></i>';
 }
 else {
     document.body.classList.add("dark");
     localStorage.setItem("theme", "dark");
-    theme_button.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    theme_button.innerHTML = '<i class="fa-solid fa-sun"></i>';
 }
 
 function theme_switch() {
@@ -21,12 +21,12 @@ function theme_switch() {
         localStorage.setItem("theme", "dark");
         document.body.classList.remove("light");
         document.body.classList.add("dark");
-        theme_button.innerHTML = '<i class="fa-solid fa-moon"></i>';
+        theme_button.innerHTML = '<i class="fa-solid fa-sun"></i>';
     }
     else {
         localStorage.setItem("theme", "light");
         document.body.classList.remove("dark");
         document.body.classList.add("light");
-        theme_button.innerHTML = '<i class="fa-solid fa-sun"></i>';
+        theme_button.innerHTML = '<i class="fa-solid fa-moon"></i>';
     }
 }
